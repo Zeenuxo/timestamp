@@ -24,10 +24,7 @@ nodemon
 
 ## Getting Started
 ```
-npm install cors
-npm install express
-npm install nodemon 
-npm install dotenv 
+npm i cors express nodemon dotenv 
 npm start 
 
 ```

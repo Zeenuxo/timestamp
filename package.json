@@ -1,8 +1,8 @@
 {
-  "name": "timestamp_microservice",
+  "name": "timestamp",
   "author": "Abhisekh Virli (Zeenuxo)",
   "version": "1.0.0",
-  "description": "API Project - Timestamp Microservice. An FCC Backend Challenge",
+  "description": "Backend Project - Timestamp Microservice.  Based on FCC Backend Challenge boilerplate.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -13,14 +13,7 @@
     "express": "^4.12.4",
     "nodemon": "^2.0.20"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/freeCodeCamp/boilerplate-project-timestamp.git"
-  },
-  "bugs": {
-    "url": "https://github.com/freeCodeCamp/freeCodeCamp/issues"
-  },
-  "homepage": "https://github.com/freeCodeCamp/boilerplate-project-timestamp#readme",
+   "homepage": "https://github.com/freeCodeCamp/boilerplate-project-timestamp#readme",
   "provider": "freeCodeCamp <team@freecodecamp.org>",
   "keywords": [
     "node",
