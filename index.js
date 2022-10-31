@@ -106,7 +106,7 @@ else {
 
 //Giving Port Access:
 //Listen for requests - PORT specified in .env shell file
-const listener = app.listen(process.env.PORT, function () {
+const listener = app.listen(process.env.PORT || 3000, function () {
   console.log('Node app is listening at http://localhost:' + listener.address().port );
 });
 
