@@ -1,36 +1,9 @@
 /****** Main Styling ******/
 
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	color: #222;
-	background-color: #FaFaFa;
-	text-align: center;
-	line-height: 1.4em;
-}
-
-.container {
+*{
+	margin: 0;
 	padding: 0;
-	margin-top: 40px;
-}
 
-h3 {
-  margin-top: 30px;
-}
-
-hr {
-	margin: 25px;
-}
-
-.footer {
-	margin-top: 40px;
-}
-
-code {
-  font-family: monospace;
-  padding: 2px;
-  color: black;
-  background-color: #fff;
 }
 
 ul {
@@ -38,9 +11,128 @@ ul {
 }
 
 li {
-  margin-bottom: 0.5em;
+	margin-bottom: 0.5em;
+	font-size: 0.75rem;
 }
 
 a {
-	color: #2574A9;
+	color: cyan;
+	text-decoration: none; 
+	font-size: 1rem;
 }
+
+hr {
+	border: 1px dotted cyan;
+	width: 60%;
+	margin: auto;
+}
+
+h2 {
+	font-size: 3.5rem;
+	margin-top: 2rem;
+}
+
+h3 {
+	font-size: 2.4rem;
+	margin-top: 2rem;
+	margin-bottom: 0.7rem;
+}
+
+h4 {
+	font-size: 1.1rem;
+	color: cyan;
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+p{
+	font-size: 1rem;
+}
+
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #fff;
+
+	background-image : url("bg.png");
+	background-size : cover;
+	background-repeat : no-repeat;
+}
+
+
+.container {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.intro {
+	display: flex;
+	justify-content: center;
+}
+
+
+.date{
+	display: grid;
+	justify-content: center;
+
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	padding: 2rem;
+}
+
+.unix{
+	display: grid;
+	justify-content: center;
+	
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	margin-left: 10rem;
+	margin-right: 10rem;
+	padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Glassmorphism & Text Gradient Effects  */
+.glass_overlay{
+    color: white;
+    backdrop-filter: blur(2px);
+    background-color: rgba(160,165,166, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+	backdrop-filter: blur(4px);
+}
+
+.glass{
+    color: white;
+	border-radius: 10px;
+    backdrop-filter: blur(2px);
+    background-color: rgba(160,165,166, 0);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+
+	backdrop-filter: blur(4px);
+	border-top: 2px rgba(40,40,40,0.35) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+	border-left: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+
+.gradient{
+	color: #d950ff;
+	background-image: -webkit-linear-gradient(90deg, #d950ff 0%, #4ed0ff 84%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+

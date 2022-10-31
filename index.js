@@ -5,35 +5,51 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 
-// index.js
-// where your node app starts
 
 
-// init project
+
+
+//Loading Packages
 const express = require('express');
 const app = express();
-
-// enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
-// so that your API is remotely testable by FCC 
 const cors = require('cors');
-app.use(cors({optionsSuccessStatus: 200}));  // some legacy browsers choke on 204
-
-// http://expressjs.com/en/starter/static-files.html
-app.use(express.static('public'));
-
-// http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + '/views/index.html');
-});
 
 
+
+
+
+
+//Middleware:
+//Enable CORS - Cross Origin Resource 
+app.use(cors({optionsSuccessStatus: 200}));  
+
+//Serve the request with index.html
+//object.method(path, handler)
+app.get('/', function(req,res){
+  const filePath =__dirname + '/views/index.html';
+    res.sendFile(filePath);
+  });
+
+//app.use(path, middlewareFunction)
+//Gives us access to static assets like Style.css
+const style = __dirname + '/public';
+app.use('/public', express.static(style));
+
+
+
+
+
+
+
+
+//API Routes - Endpoints:
 // Route 1: Our 1st API endpoint
 app.get("/api/hello", function (req, res) {
-  res.json({greeting: 'hello API'});
+  res.json({greeting: 'Hello, you have just used an API endpoint :)'});
 });
 
 
-//Route 2: After api endpoint - If there is Empty Parameter then return with response:
+//Route 2: After api endpoint - If there is Empty Parameter then return with response Current Date & Time
 app.get("/api",function(req, res){
   res.json({
     unix: new Date().getTime(), 
@@ -59,16 +75,15 @@ app.get("/api/:timestamp", function(req, res){
 
 
 
-
   //Logic using if else if statement for Validation  
-
   //isNaN accepts Number and .length accepts String
   if(!isNaN(timeNumber) && timeString.length === 13) {
     return res.json({
       unix: timeNumber,
       utc: new Date(timeNumber).toUTCString() //Date() accepts Number
- });
+  });
 } 
+
   //Check if incoming parameter is valid or not
   else if(dateString != "Invalid Date") {
   return res.json({
@@ -79,7 +94,7 @@ app.get("/api/:timestamp", function(req, res){
 
 else {
   console.log(new Date(timeNumber).toUTCString())
-  res.send({error : "Invalid Unix Timestamp - Enter 13 Digits. Invalid Timstamp - Enter date in YYYY-MM-DD format."})
+  res.send({error : "Invalid timestamp format used. For unix enter 13 Digits & for date enter YYYY-MM-DD."})
 }
 
 });
@@ -87,7 +102,20 @@ else {
 
 
 
-// listen for requests - PORT specified in .env shell file
+
+
+//Giving Port Access:
+//Listen for requests - PORT specified in .env shell file
 const listener = app.listen(process.env.PORT, function () {
   console.log('Node app is listening at http://localhost:' + listener.address().port );
 });
+
+
+
+
+
+
+//Notes:
+//CORS:
+// Allows us to make requests from one website to another website in the browser, 
+// which is normally prohibited by another browser policy called the Same-Origin Policy (SOP).

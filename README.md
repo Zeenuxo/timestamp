@@ -44,7 +44,7 @@ npm start
     "start": "nodemon index.js"
 ```
 
-![My Image](preview/preview.png)
+![My Image](img/preview.png)
 
 
 

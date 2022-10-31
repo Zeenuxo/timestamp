@@ -1,32 +1,77 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+    <title>Timestamp Microservice | Backend-Project </title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <link href="../public/style.css" rel="stylesheet" type="text/css">
+    </head>
 
-   <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h3>Example Usage:</h3>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
 
-      <h3>Example Output:</h3>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
+
+
+    <body>
+    <main class="app">
+    
+
+
+    <div class="container glass_overlay">
+    
+    <section class="intro gradient">
+    <h2>Timestamp Microservice</h2>
+    </section>  
+
+    <hr>
+
+
+
+    <section class="middle">
+
+    <div class="date glass">  
+      <h3 class="gradient">Date timestamp:</h3>
+      <p> Covert incoming date request to Unix and display in UTC format.<br>
+          Type in the address bar preferred date using the syntax below.
       </p>
+      <h4 class="gradient"> Syntax: </h4>
+      <p> [project url]/api/date  &emsp;  &emsp;  (date: YYYY/MM/DD) </p>
+      <br>
+      <h4 class="gradient"> Endpoint:</h4>
+      <p>http://localhost:port <a href="api/2022-11-01"> /api/2022-11-01 </a></p>
+      <br>
+      <h4 class="gradient">Output:</h4>
+      <p><span style="color:cyan;">{"unix":1667260800000</span>, &nbsp; "utc":"date in utc"}</p>
     </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+
+  
+    <div class="unix glass">  
+      <h3 class="gradient">Unix timestamp:</h3>
+      <p> Covert incoming unix request to date and display in UTC format.<br>
+          Type in the address bar a unix time using the syntax below.
       </p>
+      <h4 class="gradient"> Syntax: </h4>
+      <p> [project url]/api/unix  &emsp;  &emsp;  (unix: 13-digits) </p>
+      <br>
+      <h4 class="gradient"> Endpoint:</h4>
+      <p>http://localhost:port <a href="api/1671926400000"> /api/1671926400000 </a></p>
+      <br>
+      <h4 class="gradient"> Output:</h4>
+      <p>{"unix": 13 digit time,  &nbsp; <span style="color:cyan;">"utc":"Sun, 25 Dec 2022 00:00:00 GMT"}</span> </p>
     </div>
+
+    </section>
+
+    
+  
+  
+    </div>
+
+
+
+
+
+    </main>
   </body>
 </html>

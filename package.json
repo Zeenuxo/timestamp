@@ -2,7 +2,7 @@
   "name": "timestamp",
   "author": "Abhisekh Virli (Zeenuxo)",
   "version": "1.0.0",
-  "description": "Backend Project - Timestamp Microservice.  Based on FCC Backend Challenge boilerplate.",
+  "description": "Backend Project - Timestamp Microservice. Based on FreeCodeCamp Backend Challenge boilerplate.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -13,12 +13,9 @@
     "express": "^4.12.4",
     "nodemon": "^2.0.20"
   },
-   "homepage": "https://github.com/freeCodeCamp/boilerplate-project-timestamp#readme",
-  "provider": "freeCodeCamp <team@freecodecamp.org>",
   "keywords": [
     "node",
-    "express",
-    "freeCodeCamp"
+    "express"
   ],
   "license": "MIT"
 }
