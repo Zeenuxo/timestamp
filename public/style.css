@@ -1,9 +1,6 @@
-/****** Main Styling ******/
-
 *{
 	margin: 0;
 	padding: 0;
-
 }
 
 ul {
@@ -85,7 +82,7 @@ body {
 .unix{
 	display: grid;
 	justify-content: center;
-	
+
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	margin-left: 10rem;
