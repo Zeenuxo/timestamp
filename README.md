@@ -5,10 +5,12 @@ In software development Microservices are simply an organisational approach wher
  They are also known as Microservice Architecture. The biggest advantage is that they are loosely coupled so if something is broken we can easily pinpoint faults and fix things, but also if we make small changes it won't end up breaking the entire app.
 
 
+<br>
 
-## Boilerplate
+
+### Boilerplate
 ```
-Boilerplate code used from FreeCodeCamp at: <br>
+Boilerplate code used from FreeCodeCamp at: 
 https://github.com/freeCodeCamp/boilerplate-project-timestamp/
 
 ```
@@ -16,7 +18,7 @@ https://github.com/freeCodeCamp/boilerplate-project-timestamp/
 
 <br>
 
-## Dependencies
+### Dependencies
 ```
 cors
 dotenv
@@ -27,7 +29,7 @@ nodemon
 
 <br>
 
-## Getting Started
+### Getting Started
 ```
 npm i cors express nodemon dotenv 
 npm start 
@@ -36,7 +38,7 @@ npm start
 
 <br>
 
-## Inside package.json...
+### Inside package.json...
 ```
   "scripts": {
     "start": "nodemon index.js"
