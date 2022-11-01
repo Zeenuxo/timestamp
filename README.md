@@ -4,6 +4,8 @@ In software development Micro-services are simply an organisational approach whe
  
  They are also known as Microservice Architecture. The biggest advantage is that they are loosely coupled so if something is broken we can easily pinpoint faults and fix things, but also if we make small changes it won't end up breaking the entire app.
 
+ Timestamp Microservice handles date & unix API requests and converts date to unix time in UTC format and vice versa.
+
 
 <br>
 
